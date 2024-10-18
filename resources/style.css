@@ -79,3 +79,29 @@ body {
     font-weight: var(--rocket-h2-font-weight);
     font-size: var(--rocket-h2-font-size);
 }
+
+
+/* ### SECTIONS ### */
+
+div.section {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.section .sectiontitle {
+    margin: 3vh auto;
+    font-size: var(--rocket-h2-font-size);
+    font-weight: var(--rocket-h2-font-weight);
+    text-decoration: underline;
+}
+
+div.section .sectioncontent {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+div.section .sectioncontent * {
+    margin: auto;
+}
