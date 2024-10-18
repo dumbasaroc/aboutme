@@ -1,0 +1,73 @@
+/* Import Roboto Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --rocket-default-font: "Roboto Condensed", sans-serif;
+    --rocket-default-font-size: 2.5vmin;
+    --rocket-default-font-weight: 400;
+
+    --rocket-titlebar-color: rgb(64, 0, 167);
+    --rocket-titlebar-font-color: white;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    font-family: var(--rocket-default-font);
+    font-optical-sizing: auto;
+    font-weight: var(--rocket-default-font-weight);
+    font-size: var(--rocket-default-font-size);
+    font-style: normal;
+}
+
+.titlebar {
+    background: var(--rocket-titlebar-color);
+    overflow: hidden;
+    color: var(--rocket-titlebar-font-color);
+    
+    display: flex;
+    align-items: center;
+}
+
+.titlebar h1 {
+    font-size: 4vmin;
+    font-weight: bold;
+    margin: 1vh 2vw;
+}
+
+.titlebar a {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: var(--rocket-titlebar-font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.titlebar a:visited {
+    color: var(--rocket-titlebar-font-color);
+    text-decoration: none;
+}
+
+.titlebar a:hover {
+    color: var(--rocket-titlebar-font-color);
+    text-decoration: none;
+}
+
+.titlebar a:active {
+    color: var(--rocket-titlebar-font-color);
+    text-decoration: none;
+}
+
+
+/* CONTENT DIV */
+
+.rocket-content {
+    margin: .5vh 2vw;
+}
+
+.rocket-content h2 {
+    font-weight: bold;
+    font-size: 3vmin;
+}
