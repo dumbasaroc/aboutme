@@ -3,11 +3,17 @@
 
 :root {
     --rocket-default-font: "Roboto Condensed", sans-serif;
-    --rocket-default-font-size: 2.5vmin;
-    --rocket-default-font-weight: 400;
+    --rocket-default-font-size: 2vmin;
+    --rocket-h1-font-size: 4vmin;
+    --rocket-h2-font-size: 3vmin;
+
+    --rocket-default-font-weight: 300;
+    --rocket-h1-font-weight: bold;
+    --rocket-h2-font-weight: bold;
 
     --rocket-titlebar-color: rgb(64, 0, 167);
     --rocket-titlebar-font-color: white;
+    --rocket-titlebar-link-font-size: 3vmin;
 }
 
 body {
@@ -24,7 +30,8 @@ body {
 
 .titlebar {
     background: var(--rocket-titlebar-color);
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
     color: var(--rocket-titlebar-font-color);
     
     display: flex;
@@ -32,8 +39,8 @@ body {
 }
 
 .titlebar h1 {
-    font-size: 4vmin;
-    font-weight: bold;
+    font-size: var(--rocket-h1-font-size);
+    font-weight: var(--rocket-h1-font-weight);
     margin: 1vh 2vw;
 }
 
@@ -42,6 +49,7 @@ body {
     margin-right: 1vw;
     color: var(--rocket-titlebar-font-color);
     font-weight: bold;
+    font-size: var(--rocket-titlebar-link-font-size);
     text-decoration: none;
 }
 
@@ -68,6 +76,6 @@ body {
 }
 
 .rocket-content h2 {
-    font-weight: bold;
-    font-size: 3vmin;
+    font-weight: var(--rocket-h2-font-weight);
+    font-size: var(--rocket-h2-font-size);
 }
