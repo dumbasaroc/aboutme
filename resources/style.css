@@ -1,11 +1,13 @@
 /* Import Roboto Condensed */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --rocket-default-font: "Roboto Condensed", sans-serif;
-    --rocket-default-font-size: 2vmin;
-    --rocket-h1-font-size: 4vmin;
-    --rocket-h2-font-size: 3vmin;
+    --rocket-default-font: "Noto Sans", sans-serif;
+    --rocket-header-font: "Roboto Condensed", sans-serif;
+    --rocket-default-font-size: calc(8px + 1vmin);
+    --rocket-h1-font-size: calc(12px + 4vmin);
+    --rocket-h2-font-size: calc(10px + 3.5vmin);
 
     --rocket-default-font-weight: 300;
     --rocket-h1-font-weight: bold;
@@ -39,6 +41,7 @@ body {
 }
 
 .titlebar h1 {
+    font-family: var(--rocket-header-font);
     font-size: var(--rocket-h1-font-size);
     font-weight: var(--rocket-h1-font-weight);
     margin: 1vh 2vw;
@@ -49,6 +52,7 @@ body {
     margin-right: 1vw;
     color: var(--rocket-titlebar-font-color);
     font-weight: bold;
+    font-family: var(--rocket-header-font);
     font-size: var(--rocket-titlebar-link-font-size);
     text-decoration: none;
 }
@@ -84,24 +88,38 @@ body {
 /* ### SECTIONS ### */
 
 div.section {
+    --section-width: 60%;
+
     margin: 0 auto;
-    width: 60%;
+    width: var(--section-width);
+    min-width: 700px;
     display: flex;
     flex-direction: column;
 }
 
 div.section .sectiontitle {
     margin: 3vh auto;
+    font-family: var(--rocket-header-font);
     font-size: var(--rocket-h2-font-size);
     font-weight: var(--rocket-h2-font-weight);
-    text-decoration: underline;
 }
 
 div.section .sectioncontent {
+    --grid-layout: auto;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: var(--grid-layout);
 }
 
 div.section .sectioncontent * {
     margin: auto;
+
+    --col-start: auto;
+    --col-end: auto;
+    --row-start: auto;
+    --row-end: auto;
+
+    grid-column-start: var(--col-start);
+    grid-column-end: var(--col-end);
+    grid-row-start: var(--row-start);
+    grid-row-end: var(--row-end);
 }
